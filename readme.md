@@ -13,6 +13,12 @@ Sharing workshop about speech and machine learning
 19-20 October 2019 @ VIbrasticLab
 
 
+## Menu
+
+0. _Refreshing_ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+1. Signal Processing Crash Course [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1rl9C7hkD82psHUsDktWmcjBpS3KcAmmF)
+2. Autoencoder [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+
 ## :wrench: Setup
 ### Environment Setup
 ```bash
