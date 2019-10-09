@@ -16,7 +16,7 @@ Sharing workshop about speech and machine learning
 ## :hamburger: Menu
 
 0. _Refreshing_ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
-1. Signal Processing Crash Course [![Open In Colab](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/signal_processing_crash_course.ipynb)
+1. Signal Processing Crash Course [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/signal_processing_crash_course.ipynb)
 2. Autoencoder [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
 
 ## :wrench: Setup
