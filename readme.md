@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/img/vibrastic.jpg">
+  <img src="img/vibrastic.jpg">
 </p>
 
 # Vibrastic 101
