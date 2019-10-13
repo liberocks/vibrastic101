@@ -4,7 +4,7 @@
 
 # Vibrastic 101
 
-Sharing workshop about speech and machine learning
+Sharing workshop about machine learning.
 
 ## :triangular_flag_on_post: Venue
 
@@ -15,9 +15,12 @@ Sharing workshop about speech and machine learning
 
 ## :hamburger: Menu
 
-0. _Refreshing_ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
-1. Signal Processing Crash Course [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/signal_processing_crash_course.ipynb)
-2. Autoencoder [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+0. Python Basic [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/python_basic.ipynb)
+1. Introduction [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/introduction.ipynb)
+2. Linear Regression [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/linear_regression.ipynb)
+3. Linear Classification [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/linear_calssification.ipynb)
+4. Artificial Neural Network [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/artificial_neural_network.ipynb)
+5. Deep Learning [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/linerocks/vibrastic101/blob/master/notebook/deep_learning.ipynb)
 
 ## :email: Contact 
 
