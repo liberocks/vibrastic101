@@ -404,6 +404,8 @@ import torch.optim as optim
 from torch.autograd import Variable
 import torchvision.transforms as transforms
 import torchvision.datasets as dsets
+
+%matplotlib inline
 ```
 
 ---
@@ -849,7 +851,7 @@ def gradient_descent(X, y, w_0, alpha, max_iters):
 
 - plot contour
 ```python
-def plot_contour(X_data, y_data, bounds, resolution=50, cmap=cm.viridis, 
+def plot_contour(X_data, y_data, bounds, resolution=50, 
                  alpha=0.3, linewidth=5, rstride=1, cstride=5, ax=None):
     (minx,miny),(maxx,maxy) = bounds
     
@@ -871,16 +873,41 @@ def plot_contour(X_data, y_data, bounds, resolution=50, cmap=cm.viridis,
         ax = fig.gca()
         ax.set_aspect('equal')
         ax.autoscale(tight=True)
-    cset = ax.contourf(X, Y, Z, 30, cmap=cmap, rstride=rstride, 
+    cset = ax.contourf(X, Y, Z, 30, rstride=rstride, 
                        cstride=cstride, linewidth=linewidth, alpha=alpha)
-    cset = ax.contour(X, Y, Z, 10, cmap=cmap, rstride=rstride, 
+    cset = ax.contour(X, Y, Z, 10, rstride=rstride, 
                        cstride=cstride, linewidth=linewidth)
     plt.clabel(cset, inline=1, fontsize=7)
     return Z
 ```
 ---
+
+- plot hist contour
+
+```python
+def plot_hist_contour(X_bias, y, w_hist, w_norm, ax=None, title=None, show_legend=False):
+    if not ax:
+        fig = plt.figure(figsize=(5,5))
+        ax = fig.gca()
+    combi=np.hstack((w_norm.reshape(2,1), w_hist.T))
+    bounds = (np.min(combi, axis=1)-2, np.max(combi, axis=1)+2)
+    plot_contour(X_bias, y, bounds, ax=ax)
+    ax.scatter(w_norm[0], w_norm[1], c='m', marker='D', s=50, label='$w_{norm}$')
+    ax.plot(w_hist[:,0], w_hist[:,1], '.:', c='b')
+    ax.scatter(w_hist[0,0], w_hist[0,1], c='navy', marker='o', s=65, label='start')
+    ax.scatter(w_hist[-1,0], w_hist[-1,1], c='navy', marker='s', s=50, label='end')
+    plt.xlabel('$w_1$'); plt.ylabel('$w_2$'); 
+    if title:
+        plt.title(title)
+    if show_legend:
+        plt.legend(scatterpoints=1, bbox_to_anchor=(1.37,1), frameon=True);
+```
+
+---
+
 - try initialize variables
 ```python
+N = 5
 X = np.array([[0.0], [1.0], [2.0], [3.0], [4.0]])
 X_bias = np.hstack((X, np.ones((N, 1))))
 y = np.array([10.5, 5.0, 3.0, 2.5, 1.0])
@@ -888,6 +915,8 @@ y = np.array([10.5, 5.0, 3.0, 2.5, 1.0])
 w_0 = [-3,2]
 alpha = 0.05
 max_iters = 25
+
+w_norm = np.linalg.pinv(X_bias).dot(y)
 ```
 
 - run learning
