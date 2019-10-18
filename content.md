@@ -342,7 +342,7 @@ q.ask()
 ---
 
 ## Machine Learning Framework
-![bg split right:60% contain](img/comnparison.png)
+![bg split right:60% contain](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/comnparison.png)
 
 - **TensorFlow** by Google
 - **Keras** by Francois Chollet
@@ -359,7 +359,7 @@ $$f(x, y) = xy \qquad \frac{\partial}{\partial x}f(3) = \,?$$
 ---
 
 ## Solution
-$$\frac{\partial}{\partial x}f(x, y) = y \qquad \rightarrow \qquad \frac{\partial}{\partial x}f(1, 2) = 3$$
+$$\frac{\partial}{\partial x}f(x, y) = y \qquad \rightarrow \qquad \frac{\partial}{\partial x}f(1, 2) = 2$$
 
 ## Quite easy, right?
 ---
@@ -374,8 +374,8 @@ import torch
 ```
 - Declare our variable and function
 ```python
-x = torch.tensor(1, requires_grad = True)
-y = torch.tensor(2)
+x = torch.tensor(1.0, requires_grad = True)
+y = torch.tensor(2.0)
 f = x*y
 ```
 - Get our number
@@ -383,6 +383,10 @@ f = x*y
 f.backward()
 print(x.grad.data)
 ```
+---
+# Challenge
+## Solve this with Pytorch
+$$g(x,y) = xy^2 - x^2y \qquad\frac{\partial}{\partial x}g(2, 5)=\,?$$
 ---
 # Now we're set!
 ## Preparation
@@ -414,7 +418,7 @@ import torchvision.datasets as dsets
 ## Definition (cntd.)
 <br>
 
-![](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/01/machine-learning.png)
+![](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/machine-learning.png)
 
 ---
 
@@ -454,7 +458,7 @@ import torchvision.datasets as dsets
 
 ## Classification of ML (cntd.)
 
-<img width="65%" style="margin-left:100px" src="https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/01/ml.png"/>
+<img width="65%" style="margin-left:100px" src="https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/ml.png"/>
 
 ---
 
@@ -642,7 +646,6 @@ plt.xlabel('$x_1$'); plt.ylabel('$x_2$'); plt.title('Clusters predicted');
 
 ---
 
-
 ## Reinforced Learning
 
 * Inspired by behaviorist psychology;
@@ -656,7 +659,7 @@ plt.xlabel('$x_1$'); plt.ylabel('$x_2$'); plt.title('Clusters predicted');
 
 ## Remark
 
-![](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/01/ml-problems.png)
+![](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/ml-problems.png)
 
 ---
 
@@ -672,7 +675,7 @@ plt.xlabel('$x_1$'); plt.ylabel('$x_2$'); plt.title('Clusters predicted');
 
 ## Artificial Neural Network
 ##### Artificial neuron
-![](img/perceptron-diag.png)
+![](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/perceptron-diag.png)
 
 ---
 
@@ -706,7 +709,7 @@ where $\vec{w}$ is a vector of real-valued *weights*, $\vec{w} \cdot \vec{x}$ is
 ##### Activation functions
 ##### **Linear Function** ```nn.Linear```
 
-![bg right:35% contain](img/graphsright.png)
+![bg right:35% contain](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/graphsright.png)
 
 $$f(x) = x + b$$
 
@@ -719,7 +722,7 @@ $$f(x) = x + b$$
 ##### Activation functions
 ##### **Sigmoid Function** ```nn.Sigmoid```
 
-![bg right:35% contain](img/sigmoidlogisticgraph.png)
+![bg right:35% contain](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/sigmoidlogisticgraph.png)
 
 $$f(x) = \frac{1}{1+e^{-x}}$$
 
@@ -736,7 +739,7 @@ $$f(x) = \frac{1}{1+e^{-x}}$$
 ##### Activation functions
 ##### **Hyperbolic Tangent Function** ```nn.Tanh```
 
-![bg right:35% contain](img/sigmoidlogisticgraph.png)
+![bg right:35% contain](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/sigmoidlogisticgraph.png)
 
 $$f(x) = \frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$$
 
@@ -751,7 +754,7 @@ $$f(x) = \frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$$
 ##### Activation functions
 ##### **ReLU Function** ```nn.ReLU```
 
-![bg right:35% contain](img/relu.png)
+![bg right:35% contain](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/relu.png)
 
 $$f(x) = max(0,x)$$
 
@@ -766,7 +769,7 @@ $$f(x) = max(0,x)$$
 ##### Activation functions
 ##### **Leaky ReLU Function** ```nn.LeakyReLU```
 
-![bg right:35% contain](img/leakyrelu.png)
+![bg right:35% contain](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/leakyrelu.png)
 
 $$f(x) = max(0,x)$$
 
@@ -782,7 +785,7 @@ $$f(x) = max(0,x)$$
 ##### Activation functions
 ##### **Sotmax Function** ```nn.Softmax```
 
-![bg right:35% contain](img/sigmoidlogisticgraph.png)
+![bg right:35% contain](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/sigmoidlogisticgraph.png)
 
 $$f(x_i) = \frac{e^{x_i}}{\sum_{j}{e^{x_j}}}$$
 
@@ -859,7 +862,10 @@ def plot_contour(X_data, y_data, bounds, resolution=50, cmap=cm.viridis,
     for i, w_i in enumerate(x_range):
         for j, w_j in enumerate(y_range):
             Z[j,i] = error(X_data, y_data, [w_i, w_j])
-    
+```
+---
+(continuing from previous page)
+```python
     if not ax:
         fig = plt.figure(figsize=(6,6))
         ax = fig.gca()
@@ -948,15 +954,18 @@ w_hist_mom = gradient_descent_with_momentum(X_bias,y, (-3,2), alpha, beta, max_i
 def comparison_plot():
     fig = plt.figure(figsize=(9,4.5))
     ax = fig.add_subplot(121)
-    plot_hist_contour(X_bias, y, w_hist, w_norm, ax=ax, title='Gradient descent')
+    plot_hist_contour(X_bias, y, w_hist, \
+        w_norm, ax=ax, title='Gradient descent')
     ax = fig.add_subplot(122)
-    plot_hist_contour(X_bias, y, w_hist_mom, w_norm, ax=ax, title='Gradient descent with momentum', show_legend=True) 
+    plot_hist_contour(X_bias, y, w_hist_mom, \
+        w_norm, ax=ax, title='Gradient descent with momentum', show_legend=True) 
     plt.tight_layout()
-
-comparison_plot()
 ```
 ---
-
+- the plot
+```python
+comparison_plot()
+```
 - study alpha and momentum
 ```python
 def alphas_study_with_momentum(alphas, beta):
@@ -1113,7 +1122,7 @@ where
 ---
 ## Build MLP in PyTorch
 - Let's create network to model XOR gate
-![](img/tiny-dnn-network.png)
+![](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/tiny-dnn-network.png)
 ---
 - The XOR truth table
 
