@@ -22,5 +22,3 @@ Sharing workshop about machine learning.
 ## :email: Contact 
 
 Any correspondences can be done through issues tab or my **telegram** account username : *@airminum*
-
-<sub>This material is originally adopted from https://github.com/lmarti/machine-learning before modified</sub>
