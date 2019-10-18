@@ -1212,6 +1212,67 @@ output = net(Variable(torch.Tensor([1, 0])))
 print(output)
 ```
 ---
+## Beside ANN, there are also other architectures 
+- Convolutional Neural Network (CNN)
+- Recurrent Neural Network (RNN)
+- Generative Adversial Network (GAN)
+- Many more ...
+
+---
+
+## Convolutional Neural Network (CNN)
+![](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/network.png)
+
+---
+
+## Recurrent Neural Network (RNN)
+
+![](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/rnn.png)
+
+---
+
+## Recurrent Neural Network : Long Short Term Memory
+
+![height:550px](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/lstm.png)
+
+---
+
+## Generative Adversial Network (GAN)
+
+![height:550px](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/gan.png)
+
+---
+
+## <!--fit--> Project Time
+
+---
+
+## FAQ : Dataset
+
+https://www.datasetlist.com/
+
+---
+
+### FAQ : Validation
+
+![height:500px](https://raw.githubusercontent.com/linerocks/vibrastic101/master/img/grid_search_cross_validation.png)
+
+---
+
+### FAQ : Performance Improvement
+
+- Baby Sitting
+- Grid Search
+
+<br>
+
+- Half Precision
+
+---
+
+## <!--fit--> Question Answer
+
+---
 
 # Repository
 
